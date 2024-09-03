@@ -31,9 +31,11 @@ function displayPokemon(pokemon){
     const pokemonContainer = document.getElementById('pokemon-container');
     const types = pokemon.types.map(typeInfo => typeInfo.type.name).join(', ');
     const card =
-    `<div class="col-md-6 mb-4"> 
-        <div class="card">
-            <img class="img-fluid w-25" src="${pokemon.sprites.front_default}" class="card-img-top" alt="${pokemon.name}">
+    `<div class="col-md-4 mb-4"> 
+        <div class="card" style="background: linear-gradient(to bottom right, #ffcc00, #ff6699);">
+            <div class="text-center">
+                <img class="img-fluid w-50" src="${pokemon.sprites.front_default}" class="card-img-top" alt="${pokemon.name}">
+            </div>
             <div class="card-body">
                 <h5 class="card-title">${pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h5>
                 <p class="card-text">Altezza: ${pokemon.height} | Peso: ${pokemon.weight}</p>
